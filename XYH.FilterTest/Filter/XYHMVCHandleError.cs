@@ -65,11 +65,11 @@ namespace XYH.FilterTest
             // 模拟根据不同的做对应的逻辑处理
             int statusCode = filterContext.HttpContext.Response.StatusCode;
 
-            if (statusCode>=400 && statusCode<500)
+            if (statusCode >= 400 && statusCode < 500)
             {
                 filterContext.Result = new RedirectResult("/html/404.html");
             }
-            else 
+            else
             {
                 filterContext.Result = new RedirectResult("/html/500.html");
             }

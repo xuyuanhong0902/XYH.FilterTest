@@ -38,7 +38,7 @@ namespace XYH.FilterTest
             string actionName = actionExecutedContext.ActionContext.ActionDescriptor.ActionName;
 
             // 控制器名称 
-            string controllerName =actionExecutedContext.ActionContext.ControllerContext.ControllerDescriptor.ControllerName;
+            string controllerName = actionExecutedContext.ActionContext.ControllerContext.ControllerDescriptor.ControllerName;
 
             // url完整地址
             string url = (actionExecutedContext.Request.RequestUri.AbsoluteUri).ExUrlDeCode();

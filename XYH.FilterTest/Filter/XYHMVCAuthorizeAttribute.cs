@@ -6,20 +6,20 @@ using System.Web.Mvc;
 
 namespace XYH.FilterTest
 {
-    /// <summary>
-    /// MVC自定义授权
-    /// 认证授权有两个重写方法
-    /// 具体的认证逻辑实现：AuthorizeCore 这个里面写具体的认证逻辑，认证成功返回true,反之返回false
-    /// 认证失败处理逻辑：HandleUnauthorizedRequest 前一步返回 false时，就会执行到该方法中
-    /// 但是，我平时在应用过程中，一般都是在AuthorizeCore根据不同的认证结果，直接做认证后的逻辑处理
-    /// </summary>
-    public class XYHMVCAuthorizeAttribute : AuthorizeAttribute
-    {
-        /// <summary>
-        /// 认证逻辑
-        /// </summary>
-        /// <param name="filterContext">过滤器上下文</param>
-        public override void OnAuthorization(AuthorizationContext filterContext)
+ /// <summary>
+ /// MVC自定义授权
+ /// 认证授权有两个重写方法
+ /// 具体的认证逻辑实现：AuthorizeCore 这个里面写具体的认证逻辑，认证成功返回true,反之回alse
+ /// 认证失败处理逻辑：HandleUnauthorizedRequest 前一步返回 false时，就会执行到该方法中
+ /// 但是，我平时在应用过程中，一般都是在AuthorizeCore根据不同的认证结果，直接做认证后逻辑理
+ /// </summary>
+ public class XYHMVCAuthorizeAttribute : AuthorizeAttribute
+ {
+     /// <summary>
+     /// 认证逻辑
+     /// </summary>
+     /// <param name="filterContext">过滤器上下文</param>
+     public override void OnAuthorization(AuthorizationContext filterContext)
         {
 
             // 此处主要写认证授权的相关验证逻辑
@@ -69,5 +69,5 @@ namespace XYH.FilterTest
                     break;
             }
         }
-    }
+ }
 }
